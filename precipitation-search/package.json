@@ -1,0 +1,10 @@
+{
+  "name": "precipitation-search",
+  "version": "1.0.0",
+  "description": "降水量検索デモ presentation",
+  "scripts": {
+    "dev": "slidev slides.md",
+    "build": "slidev build slides.md --base /precipitation-search/ --out ../dist/precipitation-search",
+    "export": "slidev export slides.md"
+  }
+}

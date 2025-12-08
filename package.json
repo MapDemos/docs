@@ -1,0 +1,35 @@
+{
+  "name": "mapdemos-docs",
+  "version": "1.0.0",
+  "description": "Documentation - Workspace for Slidev presentations",
+  "private": true,
+  "workspaces": [
+    "nav",
+    "navigation",
+    "precipitation-search"
+  ],
+  "scripts": {
+    "build": "node build-all.js",
+    "preview": "npx serve dist",
+    "clean": "rm -rf dist",
+    "new": "node new-presentation.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MapDemos/docs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/MapDemos/docs/issues"
+  },
+  "homepage": "https://github.com/MapDemos/docs#readme",
+  "devDependencies": {
+    "@slidev/cli": "^52.10.1",
+    "@slidev/theme-default": "^0.25.0",
+    "playwright-chromium": "^1.57.0"
+  },
+  "packageManager": "npm@11.6.3+sha512.4085a763162e0e3acd19a4e9d23ad3aa0978e501ccf947dd7233c12a689ae0bb0190763c4ef12366990056b34eec438903ffed38fde4fbd722a17c2a7407ee92"
+}
