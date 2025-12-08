@@ -2,7 +2,11 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-console.log('Building all presentations...\n');
+// Check if building for local preview
+const isLocal = process.argv[2] === 'local';
+const buildScript = isLocal ? 'build:local' : 'build';
+
+console.log(`Building all presentations${isLocal ? ' (local preview)' : ' (GitHub Pages)'}...\n`);
 
 // Get all workspace directories (excluding node_modules, dist, etc.)
 const workspaces = fs.readdirSync(__dirname, { withFileTypes: true })
@@ -44,7 +48,7 @@ for (const workspace of workspaces) {
 
   try {
     // Use npm workspace command to build
-    execSync(`npm run build -w ${workspace}`, {
+    execSync(`npm run ${buildScript} -w ${workspace}`, {
       cwd: __dirname,
       stdio: 'inherit'
     });

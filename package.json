@@ -10,6 +10,7 @@
   ],
   "scripts": {
     "build": "node build-all.js",
+    "build:local": "node build-all.js local",
     "preview": "npx serve dist",
     "clean": "rm -rf dist",
     "new": "node new-presentation.js"

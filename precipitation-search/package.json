@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "slidev slides.md",
     "build": "slidev build slides.md --base /docs/precipitation-search/ --out ../dist/precipitation-search",
+    "build:local": "slidev build slides.md --base /precipitation-search/ --out ../dist/precipitation-search",
     "export": "slidev export slides.md"
   }
 }

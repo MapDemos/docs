@@ -14,8 +14,11 @@ npm run new my-demo "My Demo Title"
 # Start dev server
 npm run dev -w my-demo
 
-# Build all presentations
+# Build all presentations (for GitHub Pages)
 npm run build
+
+# Build for local preview
+npm run build:local
 
 # Preview built site
 npm run preview
@@ -73,14 +76,23 @@ This starts Slidev dev server with hot reload (usually on port 3030).
 
 ### Build all presentations
 
+**For GitHub Pages deployment:**
 ```bash
 npm run build
 ```
 
-This:
+**For local preview:**
+```bash
+npm run build:local
+npm run preview
+```
+
+The build process:
 1. Cleans `dist/` directory
-2. Auto-discovers and builds all presentations
+2. Auto-discovers and builds all presentations with correct base paths
 3. Generates landing page with links to all presentations
+
+Note: `npm run build` uses `/docs/` base path for GitHub Pages, while `npm run build:local` uses root-relative paths for local preview
 
 ### Build specific presentation
 
@@ -138,6 +150,7 @@ Then edit `<name>/slides.md` with your content!
   "scripts": {
     "dev": "slidev slides.md",
     "build": "slidev build slides.md --base /docs/my-demo/ --out ../dist/my-demo",
+    "build:local": "slidev build slides.md --base /my-demo/ --out ../dist/my-demo",
     "export": "slidev export slides.md"
   }
 }
@@ -221,8 +234,10 @@ Slidev doesn't directly export to PPT format. You can:
 |---------|-------------|
 | `npm run new <name> ["title"]` | Create a new presentation |
 | `npm run dev -w <name>` | Start dev server for a presentation |
-| `npm run build` | Build all presentations + landing page |
-| `npm run build -w <name>` | Build specific presentation |
+| `npm run build` | Build all presentations for GitHub Pages |
+| `npm run build:local` | Build all presentations for local preview |
+| `npm run build -w <name>` | Build specific presentation (GitHub Pages) |
+| `npm run build:local -w <name>` | Build specific presentation (local) |
 | `npm run preview` | Preview built site locally |
 | `npm run clean` | Remove dist directory |
 | `npm run export -w <name>` | Export presentation to PDF |
