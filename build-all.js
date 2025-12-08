@@ -203,7 +203,7 @@ ${workspaces.map(workspace => {
     title = workspace.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
   }
   return `      <li>
-        <a href="/${workspace}/" target="_blank" rel="noopener noreferrer">${title}</a>
+        <a href="./${workspace}/" target="_blank" rel="noopener noreferrer">${title}</a>
       </li>`;
 }).join('\n')}
     </ul>
