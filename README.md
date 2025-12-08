@@ -137,7 +137,7 @@ Then edit `<name>/slides.md` with your content!
   "name": "my-demo",
   "scripts": {
     "dev": "slidev slides.md",
-    "build": "slidev build slides.md --base /my-demo/ --out ../dist/my-demo",
+    "build": "slidev build slides.md --base /docs/my-demo/ --out ../dist/my-demo",
     "export": "slidev export slides.md"
   }
 }

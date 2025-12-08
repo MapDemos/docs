@@ -44,7 +44,7 @@ const packageJson = {
   description: `${title} presentation`,
   scripts: {
     dev: 'slidev slides.md',
-    build: `slidev build slides.md --base /${presentationName}/ --out ../dist/${presentationName}`,
+    build: `slidev build slides.md --base /docs/${presentationName}/ --out ../dist/${presentationName}`,
     export: 'slidev export slides.md'
   }
 };
