@@ -37,6 +37,14 @@ fs.mkdirSync(presentationDir);
 fs.mkdirSync(path.join(presentationDir, 'public'));
 console.log(`✓ Created directory: ${presentationName}/`);
 
+// Create symlink to shared assets if they exist
+const sharedAssetsDir = path.join(__dirname, 'public', 'assets');
+if (fs.existsSync(sharedAssetsDir)) {
+  const symlinkPath = path.join(presentationDir, 'public', 'assets');
+  fs.symlinkSync('../../public/assets', symlinkPath);
+  console.log(`✓ Created symlink to shared assets`);
+}
+
 // Step 2: Create package.json
 const packageJson = {
   name: presentationName,

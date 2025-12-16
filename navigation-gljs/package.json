@@ -1,0 +1,16 @@
+{
+  "name": "navigation-gljs",
+  "version": "1.0.0",
+  "description": "Turn by Turn Navigation GLSJ presentation",
+  "scripts": {
+    "dev": "slidev slides.md",
+    "build": "slidev build slides.md --base /docs/navigation-gljs/ --out ../dist/navigation-gljs",
+    "build:local": "slidev build slides.md --base /navigation-gljs/ --out ../dist/navigation-gljs",
+    "export": "slidev export slides.md"
+  },
+  "devDependencies": {
+    "@slidev/theme-apple-basic": "^0.25.1",
+    "@slidev/theme-seriph": "^0.25.0",
+    "mapbox-gl": "^3.17.0"
+  }
+}

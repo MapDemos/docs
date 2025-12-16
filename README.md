@@ -244,7 +244,10 @@ Slidev doesn't directly export to PPT format. You can:
 
 ## Tips
 
-- **Adding assets**: Place images/files in `<presentation>/public/` directory
+- **Adding assets**:
+  - Shared assets: Place in `public/` at root level (e.g., `public/assets/images/logo.png`)
+  - Presentation-specific assets: Place in `<presentation>/public/` directory
+  - Presentations access shared assets via symlinks (`<presentation>/public/assets -> ../../public/assets`)
 - **Shared dependencies**: All presentations use the same Slidev version from root
 - **Landing page**: Auto-generated from workspace list - no manual editing needed
 - **Presentation titles**: Taken from `description` field in each presentation's `package.json`
