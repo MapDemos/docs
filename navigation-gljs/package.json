@@ -1,7 +1,7 @@
 {
   "name": "navigation-gljs",
   "version": "1.0.0",
-  "description": "Turn by Turn Navigation GLSJ presentation",
+  "description": "Turn by Turn Navigation GLJS presentation",
   "scripts": {
     "dev": "slidev slides.md",
     "build": "slidev build slides.md --base /docs/navigation-gljs/ --out ../dist/navigation-gljs",
