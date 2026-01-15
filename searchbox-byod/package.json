@@ -1,0 +1,11 @@
+{
+  "name": "searchbox-byod",
+  "version": "1.0.0",
+  "description": "SearchBox API BYOD Proposal presentation",
+  "scripts": {
+    "dev": "slidev slides.md",
+    "build": "slidev build slides.md --base /docs/searchbox-byod/ --out ../dist/searchbox-byod",
+    "build:local": "slidev build slides.md --base /searchbox-byod/ --out ../dist/searchbox-byod",
+    "export": "slidev export slides.md"
+  }
+}

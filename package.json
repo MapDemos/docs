@@ -4,10 +4,9 @@
   "description": "Documentation - Workspace for Slidev presentations",
   "private": true,
   "workspaces": [
-    "nav",
-    "navigation",
     "navigation-gljs",
-    "precipitation-search"
+    "precipitation-search",
+    "searchbox-byod"
   ],
   "scripts": {
     "build": "node build-all.js",
